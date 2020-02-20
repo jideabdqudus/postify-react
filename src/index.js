@@ -9,13 +9,13 @@ class App extends React.Component{
         this.state={
             posts:'',
             key:'',
-            msg: ""
+            msgs: []
         }
     }
     handlePost(e){
         this.setState({
                 posts:e.target.value,
-                key:Date.now()  
+                key:Date.now() 
         })
 
     }
@@ -24,7 +24,7 @@ class App extends React.Component{
         e.preventDefault();
         const newPost = this.state.posts;
         console.log(newPost)
-        this.setState({msg : this.state.posts})
+        this.setState({msgs :  this.state.msgs.concat(this.state.posts)})
     }
     
     render(){
@@ -43,7 +43,11 @@ class App extends React.Component{
                     Add
                     </button>
                 </form>
-                <h1>{this.state.msg}</h1>
+                <ul>
+                {this.state.msgs.map((msg)=>
+                    
+                    <li key={msg}>{msg}</li>)}
+                </ul>
             </div>      
         )
     }
