@@ -86,8 +86,6 @@ class App extends React.Component{
 
 
 
-
-
 // const Header =(props)=>{
 //     return(
 //      <h1>Postify</h1>
