@@ -8,8 +8,7 @@ class App extends React.Component{
         this.handlePost=this.handlePost.bind(this);
         this.state={
             posts:'',
-            key:'',
-            msg: ""
+            key:''
         }
     }
     handlePost(e){
@@ -24,7 +23,6 @@ class App extends React.Component{
         e.preventDefault();
         const newPost = this.state.posts;
         console.log(newPost)
-        this.setState({msg : this.state.posts})
     }
     
     render(){
@@ -43,7 +41,6 @@ class App extends React.Component{
                     Add
                     </button>
                 </form>
-                <h1>{this.state.msg}</h1>
             </div>      
         )
     }
