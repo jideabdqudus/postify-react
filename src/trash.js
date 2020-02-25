@@ -9,7 +9,7 @@ class App extends React.Component{
         this.state={
             posts:'',
             key:''
-        }
+        } 
     }
     handlePost(e){
         this.setState({
