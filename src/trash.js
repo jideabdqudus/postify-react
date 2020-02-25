@@ -125,6 +125,9 @@ class App extends React.Component{
 //         )
 //     }
 // }
+/
+
+//Bottom
 
 
 ReactDOM.render(<App/>, document.getElementById('root'));
